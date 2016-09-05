@@ -1579,7 +1579,7 @@ public class RealmObjectTests {
         realm.beginTransaction();
         AllJavaTypes allJavaTypes = realm.createObject(AllJavaTypes.class, 42);
         thrown.expect(RealmException.class);
-        allJavaTypes.setFieldLong(111);
+        allJavaTypes.setFieldId(111);
         realm.cancelTransaction();
     }
 

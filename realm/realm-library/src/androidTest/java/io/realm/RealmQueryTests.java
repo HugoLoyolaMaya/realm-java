@@ -2311,7 +2311,7 @@ public class RealmQueryTests {
         realm.beginTransaction();
 
         AllJavaTypes emptyValues = new AllJavaTypes();
-        emptyValues.setFieldLong(1);
+        emptyValues.setFieldId(1);
         emptyValues.setFieldString("");
         emptyValues.setFieldBinary(new byte[0]);
         emptyValues.setFieldObject(emptyValues);
@@ -2319,7 +2319,7 @@ public class RealmQueryTests {
         realm.copyToRealm(emptyValues);
 
         AllJavaTypes nonEmpty = new AllJavaTypes();
-        nonEmpty.setFieldLong(2);
+        nonEmpty.setFieldId(2);
         nonEmpty.setFieldString("Foo");
         nonEmpty.setFieldBinary(new byte[]{1, 2, 3});
         nonEmpty.setFieldObject(nonEmpty);
@@ -2434,7 +2434,7 @@ public class RealmQueryTests {
         realm.beginTransaction();
 
         AllJavaTypes emptyValues = new AllJavaTypes();
-        emptyValues.setFieldLong(1);
+        emptyValues.setFieldId(1);
         emptyValues.setFieldString("");
         emptyValues.setFieldBinary(new byte[0]);
         emptyValues.setFieldObject(emptyValues);
@@ -2442,7 +2442,7 @@ public class RealmQueryTests {
         realm.copyToRealm(emptyValues);
 
         AllJavaTypes notEmpty = new AllJavaTypes();
-        notEmpty.setFieldLong(2);
+        notEmpty.setFieldId(2);
         notEmpty.setFieldString("Foo");
         notEmpty.setFieldBinary(new byte[]{1, 2, 3});
         notEmpty.setFieldObject(notEmpty);
