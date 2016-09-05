@@ -66,6 +66,7 @@ public class AllJavaTypes extends RealmObject {
 
     public AllJavaTypes(long fieldLong) {
         this.fieldId = fieldLong;
+        this.fieldLong = fieldLong;
     }
 
     public String getFieldIgnored() {

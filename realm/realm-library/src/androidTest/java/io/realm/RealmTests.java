@@ -2098,7 +2098,7 @@ public class RealmTests {
         realm.beginTransaction();
         AllJavaTypes obj = realm.createObject(AllJavaTypes.class, 42);
         assertEquals(1, realm.where(AllJavaTypes.class).count());
-        assertEquals(42, obj.getFieldLong());
+        assertEquals(42, obj.getFieldId());
     }
 
     @Test
