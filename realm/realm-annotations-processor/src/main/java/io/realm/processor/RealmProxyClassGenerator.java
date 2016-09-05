@@ -1523,6 +1523,10 @@ public class RealmProxyClassGenerator {
         for (VariableElement field : metadata.getFields()) {
             String fieldName = field.getSimpleName().toString();
             String qualifiedFieldType = field.asType().toString();
+            if (field.equals(metadata.getPrimaryKey())) {
+                // Primary key has already been set when adding new row or finding the existing row.
+                continue;
+            }
             if (Utils.isRealmModel(field)) {
                 RealmJsonTypeHelper.emitFillRealmObjectWithJsonValue(
                         interfaceName,
